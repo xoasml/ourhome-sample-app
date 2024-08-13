@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { useRegisterSW } from 'virtual:pwa-register/vue'
 
-// const intervalMS = 60 * 60 * 1000; // 1시간 (60분 * 60초 * 1000밀리초)
-const intervalMS = 1000; // 1시간 (60분 * 60초 * 1000밀리초)
+const intervalMS = 60 * 60 * 1000; // 1시간 (60분 * 60초 * 1000밀리초)
+// const intervalMS = 1000; // 1시간 (60분 * 60초 * 1000밀리초)
 
-// const { offlineReady, needRefresh, updateServiceWorker } = useRegisterSW({
 const { needRefresh, updateServiceWorker } = useRegisterSW({
   onRegisteredSW(swUrl, register) {
     console.log(`Service Worker at ReloadPrompt: ${swUrl}`)
