@@ -8,18 +8,27 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 
 ## Node 20
 
+#### 개발 구동
 ```
-npm run dev : "DEBUG=vite-plugin-pwa vite"
-```
-
-```
-npm run build : "DEBUG=vite-plugin-pwa vite build"
+npm run dev
 ```
 
+#### dist 생성
 ```
-npm run preview : "vite preview"
+npm run build
 ```
 
+#### 프리뷰 구동
 ```
-npm run test : "npm run build && serve dist"
+npm run preview
+```
+
+#### 프로덕션 구동 
+```
+serve dist
+```
+
+#### 빌드 + 프로덕션 구동
+```
+npm run test
 ```
