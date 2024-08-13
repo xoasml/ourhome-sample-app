@@ -1,0 +1,25 @@
+{
+  "name": "ourhome-sample-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "DEBUG=vite-plugin-pwa vite",
+    "build": "DEBUG=vite-plugin-pwa vite build",
+    "preview": "vite preview",
+    "test": "npm run build && serve dist"
+  },
+  "dependencies": {
+    "serve": "^14.2.3",
+    "vue": "^3.4.35"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@vueuse/core": "^10.6.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.0",
+    "vite-plugin-pwa": "^0.20.1",
+    "vue-tsc": "^2.0.29"
+  }
+}
