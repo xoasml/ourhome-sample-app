@@ -67,7 +67,7 @@ const fixGrid = (type: string) => {
 
 const panes:Ref<{title: string;   content: string;   key: string;}[]> = ref([
   { title: '식사재메뉴', content: 'BookingRequest', key: 'BookingRequest' },
-  { title: 'Dummy', content: 'SampleTwo', key: 'SampleTwo' },
+  { title: '샘플 메뉴', content: 'SampleTwo', key: 'SampleTwo' },
 ]);
 const activeKey: Ref<string> = ref(panes.value[0].key);
 // const newTabIndex = ref(0);
@@ -197,19 +197,19 @@ const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
       <div class="bottom_section">
         <ul class="navi">
           <li>
-            <button class="btn_main">QUOTATION REQUEST</button>
+            <button class="btn_main">대메뉴 1</button>
           </li>
           <li>
-            <button class="btn_main">DELIVERY REQUEST</button>
+            <button class="btn_main">대메뉴 2</button>
           </li>
           <li>
-            <button class="btn_main">SERVICE</button>
+            <button class="btn_main">대메뉴 3</button>
           </li>
           <li>
-            <button class="btn_main">REPORT</button>
+            <button class="btn_main">대메뉴 4</button>
           </li>
           <li>
-            <button class="btn_main">UTILITY</button>
+            <button class="btn_main">대메뉴 5</button>
           </li>
         </ul>
 
@@ -271,7 +271,8 @@ const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
             <button class="tabs-close-x"></button>
           </li>
         </ul>
-        <div v-for="(pane, pIndex) in panes" :key="pIndex" :class="{ 'none-display': currentTab !== pIndex }">
+        <div v-for="(pane, pIndex) in panes" :key="pIndex">
+<!--             :class="{ 'none-display': currentTab !== pIndex }"-->
 <!--          <component :is="pane.content" v-show="currentTab === pIndex" />-->
           <div class="realgrid_container realgrid_container07">
             <div class="real_head">
@@ -284,23 +285,23 @@ const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
               </div>
               <div class="real_head_right">
                 <button class="btn_default btn_print_fuction">
-                  btnBankAccount
+                  상단 우측 버튼 영역
                 </button>
-                <button class="btn_default btn_process">
-                  btnDepositoryTransform
-                </button>
-                <button class="btn_default btn_process">
-                  btnDepositoryRequest
-                </button>
-                <button class="btn_default btn_function">
-                  btnSave
-                </button>
-                <button class="btn_default btn_function">
-                  btnDelete
-                </button>
-                <button class="btn_default btn_function">
-                  btnCancel
-                </button>
+<!--                <button class="btn_default btn_process">-->
+<!--                  btnDepositoryTransform-->
+<!--                </button>-->
+<!--                <button class="btn_default btn_process">-->
+<!--                  btnDepositoryRequest-->
+<!--                </button>-->
+<!--                <button class="btn_default btn_function">-->
+<!--                  btnSave-->
+<!--                </button>-->
+<!--                <button class="btn_default btn_function">-->
+<!--                  btnDelete-->
+<!--                </button>-->
+<!--                <button class="btn_default btn_function">-->
+<!--                  btnCancel-->
+<!--                </button>-->
               </div>
             </div>
             <div class="real_top_filter">
@@ -313,13 +314,13 @@ const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
 <!--                </button>-->
                 <button class="btn_default btn_filter" @click="fixGrid('column')">
                   <img src="@/assets/img/icon_vertical.png" />
-                  <span v-if="isFixCol">unFixColumn</span>
-                  <span v-else>fixColumn</span>
+                  <span v-if="isFixCol">열 고정 해제</span>
+                  <span v-else>열 고정</span>
                 </button>
                 <button class="btn_default btn_filter" @click="fixGrid('row')">
                   <img src="@/assets/img/icon_hori.png" />
-                  <span v-if="isFixRow">unFixRow</span>
-                  <span v-else>fixRow</span>
+                  <span v-if="isFixRow">행 고정 해제</span>
+                  <span v-else>행 고정</span>
                 </button>
               </div>
             </div>
@@ -331,31 +332,31 @@ const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
               <div class="footer_left">
                 <!-- //drop down -->
                 <button class="btn_default btn_function">
-                  upload
+                  하단 좌측 버튼 영역
                 </button>
-                <button class="btn_default btn_function" >
-                  download
-                </button>
+<!--                <button class="btn_default btn_function" >-->
+<!--                  download-->
+<!--                </button>-->
               </div>
               <div class="footer_right">
                 <button class="btn_default btn_critical_process">
-                  btn1
+                  하단 우측 버튼 영역
                 </button>
-                <button class="btn_default btn_critical_process">
-                  btn1
-                </button>
-                <button class="btn_default btn_critical_process">
-                  btn1
-                </button>
-                <button class="btn_default btn_print_fuction">
-                  btn1
-                </button>
-                <button class="btn_default btn_critical_process">
-                  btn1
-                </button>
-                <button class="btn_default btn_process">
-                  btn1
-                </button>
+<!--                <button class="btn_default btn_critical_process">-->
+<!--                  btn1-->
+<!--                </button>-->
+<!--                <button class="btn_default btn_critical_process">-->
+<!--                  btn1-->
+<!--                </button>-->
+<!--                <button class="btn_default btn_print_fuction">-->
+<!--                  btn1-->
+<!--                </button>-->
+<!--                <button class="btn_default btn_critical_process">-->
+<!--                  btn1-->
+<!--                </button>-->
+<!--                <button class="btn_default btn_process">-->
+<!--                  btn1-->
+<!--                </button>-->
               </div>
             </div>
           </div>
