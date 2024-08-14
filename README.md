@@ -32,3 +32,17 @@ serve dist
 ```
 npm run test
 ```
+
+
+#### scss
+```sh
+npm install -D sass-embedded
+```
+#### realgrid
+```sh
+npm i realgrid
+```
+#### node:url ts
+```sh
+npm install --save-dev @types/node
+```
