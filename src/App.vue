@@ -274,7 +274,7 @@ const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
             <button class="tabs-close-x"></button>
           </li>
         </ul>
-        <div v-for="(pane, pIndex) in panes" :key="pIndex">
+        <div v-for="(pane, pIndex) in panes" :key="pIndex" :class="{ 'none-display': currentTab !== pIndex }">
 <!--             :class="{ 'none-display': currentTab !== pIndex }"-->
 <!--          <component :is="pane.content" v-show="currentTab === pIndex" />-->
           <div class="realgrid_container realgrid_container07">
