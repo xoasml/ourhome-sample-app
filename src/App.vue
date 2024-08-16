@@ -31,7 +31,7 @@ onMounted(() => {
   const grid = new RealGridCreate(setGridData);
   gridView = grid.getGridView();
   dataProvider = grid.getDataProvider();
-  let rowsList = [...rows, ...rows, ...rows, ...rows, ...rows, ...rows];
+  let rowsList = [...rows, ...rows];
   rowsList = [...rowsList, ...rowsList,...rowsList, ...rowsList,...rowsList, ...rowsList];
   console.log('2',dataProvider)
   gridDataCnt.value = rowsList.length;
@@ -42,23 +42,26 @@ const isFixCol = ref(false);
 const isFixRow = ref(false);
 const fixGrid = (type: string) => {
   const current = gridView.getCurrent();
-  console.log(current)
   if (type === 'column') {
     if (isFixCol.value) {
       gridView.setFixedOptions({ colCount: 0 });
     } else {
       const name = current.column;
-      const index = gridView.layoutByName(name).root.vindex;
-      gridView.setFixedOptions({ colCount: index + 1 });
+      const colIndex = name ? gridView.layoutByName(name).root.vindex : 0;
+      gridView.setFixedOptions({colCount: colIndex + 1});
+
     }
     isFixCol.value = !isFixCol.value;
   } else if (type === 'row') {
     if (isFixRow.value) {
       gridView.setFixedOptions({ rowCount: 0 });
     } else {
+
+      const rowIndex = current.itemIndex < 0 ? 0 : current.itemIndex;
+
       gridView.setFixedOptions({
         exceptFromSorting: false,
-        rowCount: current.itemIndex + 1,
+        rowCount: rowIndex + 1,
       });
     }
     isFixRow.value = !isFixRow.value;
