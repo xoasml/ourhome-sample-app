@@ -86,8 +86,6 @@ const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
 </script>
 
 <template>
-
-
   <ReloadPrompt />
   <div id="header">
     <div class="header_top">

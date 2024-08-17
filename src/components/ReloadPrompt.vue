@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useRegisterSW } from 'virtual:pwa-register/vue'
 
-const intervalMS = 60 * 60 * 1000; // 1시간 (60분 * 60초 * 1000밀리초)
-// const intervalMS = 1000; // 1시간 (60분 * 60초 * 1000밀리초)
+// const intervalMS = 60 * 60 * 1000; // 1시간 (60분 * 60초 * 1000밀리초)
+const intervalMS = 1000; // 1시간 (60분 * 60초 * 1000밀리초)
 
 const { needRefresh, updateServiceWorker } = useRegisterSW({
   onRegisteredSW(swUrl, register) {
@@ -44,18 +44,37 @@ async function close() {
 </template>
 
 <style>
+
 .pwa-toast {
+  //position: fixed;
+  //right: 0;
+  //bottom: 0;
+  //margin: 16px;
+  //padding: 12px;
+  //border: 1px solid #8885;
+  //border-radius: 4px;
+  //z-index: 99;
+  //text-align: left;
+  //box-shadow: 3px 4px 5px 0px #8885;
+  //background-color: #f7f7f7;
+
+
   position: fixed;
-  right: 0;
-  bottom: 0;
-  margin: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 12px;
   border: 1px solid #8885;
   border-radius: 4px;
-  z-index: 1;
+  z-index: 99;
   text-align: left;
   box-shadow: 3px 4px 5px 0px #8885;
+  background-color: #f7f7f7;
+
 }
+
+
+
 .pwa-toast .message {
   margin-bottom: 8px;
 }

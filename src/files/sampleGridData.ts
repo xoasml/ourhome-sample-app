@@ -138,6 +138,8 @@ export const columns = [
     header: {
       text: '식사유형'
     },
+    width: 200,
+    editable: true,
   },
   {
     fieldName: "foodType", // 식사구분
