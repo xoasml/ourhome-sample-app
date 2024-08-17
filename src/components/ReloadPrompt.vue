@@ -18,46 +18,74 @@ const { needRefresh, updateServiceWorker } = useRegisterSW({
 })
 
 async function close() {
-  offlineReady.value = false
+  // offlineReady.value = false
   needRefresh.value = false
 }
 </script>
 
 <template>
+<!--  <div-->
+<!--      v-if="needRefresh"-->
+<!--      class="pwa-toast"-->
+<!--      role="alert"-->
+<!--  >-->
+<!--    <div class="message">-->
+<!--      <p class="modal_title">새로고침</p>-->
+<!--      <span v-if="needRefresh">-->
+<!--        업데이트 내용이 있습니다.-->
+<!--        업데이트 하시겠습니까?-->
+<!--      </span>-->
+<!--    </div>-->
+<!--      <button class="button" @click="close">-->
+<!--        닫기-->
+<!--      </button>-->
+<!--      <button class="button" @click="updateServiceWorker()">-->
+<!--        새로 고침-->
+<!--      </button>-->
+<!--  </div>-->
+
   <div
       v-if="needRefresh"
-      class="pwa-toast"
+      class="vm--container"
       role="alert"
   >
-    <div class="message">
-      <span v-if="needRefresh">
-        새로운 업데이트가 있습니다. 페이지를 새로 고치세요.
-      </span>
+    <div style="left: 720px;
+      width: 480px;
+      height: auto;
+      top: 389px;" class="vm--modal">
+      <div class="modal">
+        <div slot="top-right" class="btn_modal_close">
+          <button @click="close"></button>
+        </div>
+        <div class="message">
+          <p class="title">알림</p>
+          <div style="margin-bottom: 20px">
+            <p class="text" style="margin-bottom: 8px">업데이트 내용이 있습니다.</p>
+            <p class="text" >업데이트 하시겠습니까?</p>
+          </div>
+        </div>
+        <div class="modal_btn_contents">
+          <button class="btn_deep_gray" @click="close">
+            아니오
+          </button>
+          <button class="btn_primary" @click="updateServiceWorker()">
+            예
+          </button>
+        </div>
+      </div>
     </div>
-    <button @click="updateServiceWorker()">
-      새로 고침
-    </button>
-    <button @click="close">
-      닫기
-    </button>
   </div>
+
+
 </template>
+
+
+
+
 
 <style>
 
 .pwa-toast {
-  //position: fixed;
-  //right: 0;
-  //bottom: 0;
-  //margin: 16px;
-  //padding: 12px;
-  //border: 1px solid #8885;
-  //border-radius: 4px;
-  //z-index: 99;
-  //text-align: left;
-  //box-shadow: 3px 4px 5px 0px #8885;
-  //background-color: #f7f7f7;
-
 
   position: fixed;
   top: 50%;
@@ -73,16 +101,19 @@ async function close() {
 
 }
 
-
-
-.pwa-toast .message {
-  margin-bottom: 8px;
+.title{
+  font-weight: bold;
+  font-size: larger;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
-.pwa-toast button {
-  border: 1px solid #8885;
-  outline: none;
-  margin-right: 5px;
-  border-radius: 2px;
-  padding: 3px 10px;
+
+.message {
+  text-align: center;
 }
+
+.text {
+  font-size: large;
+}
+
 </style>

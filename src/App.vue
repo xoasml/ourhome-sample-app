@@ -94,7 +94,7 @@ const showModal:Ref<boolean> =  ref(true);
       <div class="top_section">
         <div class="top_left">
           <h1><img src="@/assets/img/logo_k.png" /></h1>
-          <span>SampleDevelop
+          <span>SampleDevelopppppppppp
 <!--            <img src="@/assets/img/head_title.svg" alt="D-Sales" />-->
           </span>
         </div>
@@ -367,34 +367,68 @@ const showModal:Ref<boolean> =  ref(true);
     </div>
     <!-- //컨텐츠 -->
   </div>
-  <div :class="showModal ? `vm--container`:`none-display vm--container`">
-    <div style="left: 720px;
-      width: 480px;
-      height: auto;
-      top: 389px;" class="vm--modal">
-      <div class="modal">
-        <div slot="top-right" class="btn_modal_close">
-          <button @click="showModal = false"></button>
-        </div>
-        <p class="modal_title">새로고침</p>
-        <div class="modal_content">
-          <p>새로고침</p>
-        </div>
-        <div class="modal_btn_contents">
-          <button class="btn_deep_gray" @click="showModal = false">
-            아니오
-          </button>
-          <button class="btn_primary">
-            예
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+<!--  <div :class="showModal ? `vm&#45;&#45;container`:`none-display vm&#45;&#45;container`">-->
+<!--    <div style="left: 720px;-->
+<!--      width: 480px;-->
+<!--      height: auto;-->
+<!--      top: 389px;" class="vm&#45;&#45;modal">-->
+<!--      <div class="modal">-->
+<!--        <div slot="top-right" class="btn_modal_close">-->
+<!--          <button @click="showModal = false"></button>-->
+<!--        </div>-->
+<!--        <p class="modal_title">새로고침</p>-->
+<!--        <div class="modal_content">-->
+<!--          <p>새로고침</p>-->
+<!--        </div>-->
+<!--        <div class="modal_btn_contents">-->
+<!--          <button class="btn_deep_gray" @click="showModal = false">-->
+<!--            아니오-->
+<!--          </button>-->
+<!--          <button class="btn_primary">-->
+<!--            예-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+<!--  <div-->
+<!--      v-if="true"-->
+<!--      class="vm&#45;&#45;container"-->
+<!--      role="alert"-->
+<!--  >-->
+<!--    <div style="left: 720px;-->
+<!--      width: 480px;-->
+<!--      height: auto;-->
+<!--      top: 389px;" class="vm&#45;&#45;modal">-->
+<!--      <div class="modal">-->
+<!--        <div slot="top-right" class="btn_modal_close">-->
+<!--          <button @click="showModal = false"></button>-->
+<!--        </div>-->
+<!--        <div class="message">-->
+<!--          <p class="title">알림</p>-->
+<!--          <div v-if="true" style="margin-bottom: 20px">-->
+<!--            <p style="margin-bottom: 8px">업데이트 내용이 있습니다.</p>-->
+<!--            <p>업데이트 하시겠습니까?</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="modal_btn_contents">-->
+<!--          <button class="btn_deep_gray" @click="showModal = false">-->
+<!--            아니오-->
+<!--          </button>-->
+<!--          <button class="btn_primary">-->
+<!--            예-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 
 </template>
 
 <style lang="scss">
 @import '@/assets/scss/index';
 @import '@/assets/fonts/font.css';
+
 </style>
