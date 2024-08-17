@@ -5,7 +5,7 @@ import {onMounted, ref, Ref} from "vue";
 const gridName: Ref<string | HTMLDivElement> = ref('test');
 
 import RealGridCreate from '@/files/realGridCreate';
-import { fields, columns, layouts, rows } from '@/files/sampleGridData.ts';
+import { fields, columns, layouts, rows } from '@/files/sampleGridData';
 import {GridView, LocalDataProvider} from "realgrid";
 
 let gridView: GridView;
@@ -83,6 +83,8 @@ const confiOpen =  ref(false);
 const myinfoOpen =  ref(false);
 const selectValue =  ref('');
 const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
+
+const showModal:Ref<boolean> =  ref(true);
 </script>
 
 <template>
@@ -273,7 +275,6 @@ const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
           </li>
         </ul>
         <div v-for="(pane, pIndex) in panes" :key="pIndex" :class="{ 'none-display': currentTab !== pIndex }">
-<!--             :class="{ 'none-display': currentTab !== pIndex }"-->
 <!--          <component :is="pane.content" v-show="currentTab === pIndex" />-->
           <div class="realgrid_container realgrid_container07">
             <div class="real_head">
@@ -365,6 +366,30 @@ const selectOptions =  ref(['KOREA', 'ENGLISH', 'VIETNAM']);
       </div>
     </div>
     <!-- //컨텐츠 -->
+  </div>
+  <div :class="showModal ? `vm--container`:`none-display vm--container`">
+    <div style="left: 720px;
+      width: 480px;
+      height: auto;
+      top: 389px;" class="vm--modal">
+      <div class="modal">
+        <div slot="top-right" class="btn_modal_close">
+          <button @click="showModal = false"></button>
+        </div>
+        <p class="modal_title">새로고침</p>
+        <div class="modal_content">
+          <p>새로고침</p>
+        </div>
+        <div class="modal_btn_contents">
+          <button class="btn_deep_gray" @click="showModal = false">
+            아니오
+          </button>
+          <button class="btn_primary">
+            예
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
 </template>
