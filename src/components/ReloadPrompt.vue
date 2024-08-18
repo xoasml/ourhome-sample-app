@@ -24,26 +24,6 @@ async function close() {
 </script>
 
 <template>
-<!--  <div-->
-<!--      v-if="needRefresh"-->
-<!--      class="pwa-toast"-->
-<!--      role="alert"-->
-<!--  >-->
-<!--    <div class="message">-->
-<!--      <p class="modal_title">새로고침</p>-->
-<!--      <span v-if="needRefresh">-->
-<!--        업데이트 내용이 있습니다.-->
-<!--        업데이트 하시겠습니까?-->
-<!--      </span>-->
-<!--    </div>-->
-<!--      <button class="button" @click="close">-->
-<!--        닫기-->
-<!--      </button>-->
-<!--      <button class="button" @click="updateServiceWorker()">-->
-<!--        새로 고침-->
-<!--      </button>-->
-<!--  </div>-->
-
   <div
       v-if="needRefresh"
       class="vm--container"
@@ -75,8 +55,6 @@ async function close() {
       </div>
     </div>
   </div>
-
-
 </template>
 
 

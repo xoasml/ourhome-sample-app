@@ -94,9 +94,8 @@ const showModal:Ref<boolean> =  ref(true);
       <div class="top_section">
         <div class="top_left">
           <h1><img src="@/assets/img/logo_k.png" /></h1>
-          <span>SampleDevelopppppppppp
-<!--            <img src="@/assets/img/head_title.svg" alt="D-Sales" />-->
-          </span>
+<!--          <span>SampleDevelop</span>-->
+          <span>샘플 개발</span>
         </div>
         <div class="top_right">
           <button class="btn_confi" @click="confiOpen = !confiOpen">
@@ -393,37 +392,6 @@ const showModal:Ref<boolean> =  ref(true);
 <!--  </div>-->
 
 
-<!--  <div-->
-<!--      v-if="true"-->
-<!--      class="vm&#45;&#45;container"-->
-<!--      role="alert"-->
-<!--  >-->
-<!--    <div style="left: 720px;-->
-<!--      width: 480px;-->
-<!--      height: auto;-->
-<!--      top: 389px;" class="vm&#45;&#45;modal">-->
-<!--      <div class="modal">-->
-<!--        <div slot="top-right" class="btn_modal_close">-->
-<!--          <button @click="showModal = false"></button>-->
-<!--        </div>-->
-<!--        <div class="message">-->
-<!--          <p class="title">알림</p>-->
-<!--          <div v-if="true" style="margin-bottom: 20px">-->
-<!--            <p style="margin-bottom: 8px">업데이트 내용이 있습니다.</p>-->
-<!--            <p>업데이트 하시겠습니까?</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="modal_btn_contents">-->
-<!--          <button class="btn_deep_gray" @click="showModal = false">-->
-<!--            아니오-->
-<!--          </button>-->
-<!--          <button class="btn_primary">-->
-<!--            예-->
-<!--          </button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
 
 </template>
 
